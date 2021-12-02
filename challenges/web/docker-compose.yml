@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:stable
+    ports: 
+      - "127.0.0.1:58080:80"
+      #- "58080:80"
+    volumes:
+      - "./etc/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro"
+      - "./web:/usr/share/nginx/frontend:ro"
+      - "./backend:/usr/share/nginx/b8ck3nd:ro"
+    restart: always
+    depends_on:
+      - mysql
+      - php
+
+  php:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile_php-fpm
+    restart: always
+    volumes:
+      - "./web:/usr/share/nginx/frontend:ro"
+      - "./backend:/usr/share/nginx/b8ck3nd:ro"
+      - "./etc/php/php.ini:/usr/local/etc/php/php.ini:ro"
+      - "./images:/usr/share/nginx/images"
+
+  mysql:
+    image: mariadb:10.7.1-focal
+    volumes:
+      - "./database/data:/var/lib/mysql"
+      #- "/tmp/database/data:/var/lib/mysql"
+      - "./database/init:/docker-entrypoint-initdb.d:ro"
+      - "./etc/mysql/conf.d:/etc/mysql/conf.d:ro"
+    restart: always
+    environment:
+      LANG: C.UTF-8
+      MYSQL_ROOT_PASSWORD: bRz.u~hs49)-L{w]
+      MYSQL_DATABASE: web
+      MYSQL_USER: web_user
+      MYSQL_PASSWORD: n%6GZgt*hH[+p7vJ
+    command: mysqld --max_statement_time=2
