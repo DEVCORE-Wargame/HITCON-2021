@@ -50,7 +50,7 @@ $row = $res->fetch();
         <div class="ts very narrow container">
             <h1 class="ts header">
                 SecTools.tw 
-                <div class="sub header">趁這個冬天 以冷為藉口牽起他的手ღ By Leaf</div>
+                <div class="sub header">趁這個冬天 以冷為藉口牽起他的手ღ</div>
             </h1>
         </div>
     </div>
