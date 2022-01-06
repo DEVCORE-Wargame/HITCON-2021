@@ -8,7 +8,7 @@
    \_/     \_/   |_____\___/ \___/|_|\_\   \_/     \_/  
                                                         
 
-   DEVCORE{no.1_path_traverse_to_the_m00n}
+   scvsDP{no.1_path_traverse_to_the_m00n}
 
  */
 

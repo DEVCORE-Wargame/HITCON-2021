@@ -11,21 +11,21 @@ RUN echo '# find PHP source code and you will get the flag.' >> /etc/passwd
 
 COPY readflag.c /readflag.c
 RUN sed -i 's/{FLAG}/\/flag/g' /readflag.c
-RUN echo 'DEVCORE{no.6_local_file_include_t0_rescu3}' > /flag
+RUN echo 'scvsDP{no.6_local_file_include_t0_rescu3}' > /flag
 RUN chmod 0400 /flag && chown root:root /flag
 RUN chmod 0444 /readflag.c && gcc /readflag.c -o /readflag
 RUN chown root:root /readflag && chmod 4555 /readflag
 
 COPY readflag.c /readflag.c
 RUN sed -i 's/{FLAG}/\/flag_for_backend/g' /readflag.c
-RUN echo 'DEVCORE{no.4_x-forward-for_2b_or_n0t_2b}' > /flag_for_backend
+RUN echo 'scvsDP{no.4_x-forward-for_2b_or_n0t_2b}' > /flag_for_backend
 RUN chmod 0400 /flag_for_backend && chown root:root /flag_for_backend
 RUN chmod 0444 /readflag.c && gcc /readflag.c -o /readflag2
 RUN chown root:root /readflag2 && chmod 4555 /readflag2
 
 COPY readflag2.c /readflag.c
 RUN sed -i 's/{FLAG}/\/flag_for_upload_dhzh6s/g' /readflag.c
-RUN echo 'DEVCORE{no.5_file_uploaded_wheres_my_sh3ll}' > /flag_for_upload_dhzh6s
+RUN echo 'scvsDP{no.5_file_uploaded_wheres_my_sh3ll}' > /flag_for_upload_dhzh6s
 RUN chmod 0400 /flag_for_upload_dhzh6s && chown root:root /flag_for_upload_dhzh6s
 RUN chmod 0444 /readflag.c && gcc /readflag.c -o /usr/bin/rsync_wrap
 RUN chown root:root /usr/bin/rsync_wrap && chmod 4555 /usr/bin/rsync_wrap

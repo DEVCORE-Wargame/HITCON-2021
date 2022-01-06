@@ -15,7 +15,7 @@ $row = $res->fetch();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEVCORE 感謝祭</title>
+    <title>SecTools.tw 模擬賽</title>
     <?php
         require_once('frontend_lib.php')
     ?>
@@ -49,8 +49,8 @@ $row = $res->fetch();
     <div class="ts horizontally fitted fluid slate">
         <div class="ts very narrow container">
             <h1 class="ts header">
-                DEVCORE 感謝祭
-                <div class="sub header">慶祝 DEVCORE Research Team 榮獲 Pwn2Own Austin 2021 亞軍</div>
+                SecTools.tw 
+                <div class="sub header">趁這個冬天 以冷為藉口牽起他的手ღ By Leaf</div>
             </h1>
         </div>
     </div>
